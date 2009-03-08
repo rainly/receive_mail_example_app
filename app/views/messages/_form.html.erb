@@ -1,24 +1,8 @@
-<% form_for @message do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :body %><br />
+<% airbudd_form_for [@user, @message] do |f| %>
     <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :subject %><br />
     <%= f.text_field :subject %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
     <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :to_email %><br />
     <%= f.text_field :to_email %>
-  </p>
-  <p>
-    <%= f.label :from_email %><br />
     <%= f.text_field :from_email %>
-  </p>
-  <p><%= f.submit "Submit" %></p>
+    <%= f.submit "Submit" %>
 <% end %>

@@ -22,7 +22,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_message_path(@message) %> |
-  <%= link_to "Destroy", @message, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", messages_path %>
+  <%= link_to "Edit", edit_user_message_path(@user, @message) %> |
+  <%= link_to "Destroy", [@user, @message], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", user_messages_path %>
 </p>
