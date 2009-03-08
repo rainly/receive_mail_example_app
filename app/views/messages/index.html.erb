@@ -1,0 +1,25 @@
+<% title "Messages" %>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Subject</th>
+    <th>User</th>
+    <th>To Email</th>
+    <th>From Email</th>
+  </tr>
+  <% for message in @messages %>
+    <tr>
+      <td><%=h message.body %></td>
+      <td><%=h message.subject %></td>
+      <td><%=h message.user_id %></td>
+      <td><%=h message.to_email %></td>
+      <td><%=h message.from_email %></td>
+      <td><%= link_to "Show", message %></td>
+      <td><%= link_to "Edit", edit_message_path(message) %></td>
+      <td><%= link_to "Destroy", message, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Message", new_message_path %></p>
