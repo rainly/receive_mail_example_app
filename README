@@ -1,1 +1,1 @@
-Users fetcher to check a mail server periodically and get the mail, then deliver based on who the e-mail is to.
+Uses fetcher to check a mail server periodically and get the mail, then deliver based on who (whom?) the e-mail is to.
